@@ -18,12 +18,11 @@
 
 </head>
 <body>
-    @include('layouts.navbar')
     <div id="app">
+        <site-navbar></site-navbar>
         @yield('content')
-        @include('layouts.footer')
+        <site-footer></site-footer>
     </div>
-    <script src="/js/app.js?v=1.0"></script>
-    @yield('scripts')
+    <script src="/js/app.js?v=1.1"></script>
 </body>
 </html>

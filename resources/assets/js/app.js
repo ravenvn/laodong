@@ -4,6 +4,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+require('./bootstrap')
 import Vue from 'vue'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
@@ -17,6 +18,8 @@ Vue.use(Buefy)
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'))
+Vue.component('site-navbar', require('./components/SiteNavbar.vue'))
+Vue.component('site-footer', require('./components/SiteFooter.vue'))
 
 const app = new Vue({
     el: '#app'
