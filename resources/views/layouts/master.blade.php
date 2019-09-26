@@ -18,8 +18,8 @@
 
 </head>
 <body>
+    @include('layouts.navbar')
     <div id="app">
-        @include('layouts.navbar')
         @yield('content')
         @include('layouts.footer')
     </div>
