@@ -25500,7 +25500,9 @@ var render = function() {
             ])
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
     ],
     1
   )
@@ -25520,6 +25522,28 @@ var staticRenderFns = [
       ),
       _c("strong", [_vm._v("Gửi")]),
       _vm._v(". Tôi sẽ gọi cho bạn ngay khi có thể.\n    ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content has-text-centered" }, [
+      _vm._v(
+        "\n        Để an toàn, hãy kiểm tra kỹ xem công ty XKLĐ bạn chuẩn bị tham gia có trong danh sách chính thức của Cục quản lý lao động ngoài nước hay không tại đây "
+      ),
+      _c("i", { staticClass: "fas fa-hand-point-down" }),
+      _c(
+        "a",
+        {
+          attrs: {
+            href:
+              "http://www.dolab.gov.vn/BU/Index.aspx?LIST_ID=1371&type=hdmbmtmn&MENU_ID=246&DOC_ID=1561",
+            target: "_blank"
+          }
+        },
+        [_c("img", { attrs: { src: "/images/bo_lao_dong.png" } })]
+      )
     ])
   }
 ]
@@ -25544,6 +25568,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
+//
+//
+//
 //
 //
 //
