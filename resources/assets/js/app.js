@@ -20,6 +20,7 @@ Vue.use(Buefy)
 Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('site-navbar', require('./components/SiteNavbar.vue'))
 Vue.component('site-footer', require('./components/SiteFooter.vue'))
+Vue.component('notification', require('./components/common/Notification.vue'))
 
 const app = new Vue({
     el: '#app'

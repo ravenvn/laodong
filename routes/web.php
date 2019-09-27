@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::post('/store-simple-contact', 'HomeController@storeSimpleContact');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
