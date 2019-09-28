@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use App\Contact;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $homepage = Page::find(1);
+
+        return view('home.index', compact('homepage'));
     }
 
     public function storeSimpleContact(Request $request)

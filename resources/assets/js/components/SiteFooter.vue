@@ -2,8 +2,7 @@
     <footer class="footer">
         <notification ref="notification"></notification>
         <div class="content has-text-centered">
-            Đừng vội liên hệ khi chưa đọc hết các chia sẻ kinh nghiệm tâm huyết từ website này bạn nhé.<br/>
-            Nếu bạn cần tư vấn thêm, hãy điền Họ tên, năm sinh và SĐT rồi nhấn nút <strong>Gửi</strong>. Tôi sẽ gọi cho bạn ngay khi có thể.
+            Nếu bạn cần chia sẻ, hãy điền Họ tên, năm sinh và SĐT rồi nhấn nút <strong>Gửi</strong>. Tôi sẽ gọi cho bạn ngay khi có thể.
         </div>
         <div class="content has-text-centered">
             <div class="columns">
