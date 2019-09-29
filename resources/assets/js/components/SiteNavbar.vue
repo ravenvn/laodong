@@ -1,7 +1,7 @@
 <template>
     <b-navbar>
         <template slot="brand">
-            <b-navbar-item :to="{ path: '/' }">
+            <b-navbar-item href="/">
                 <img
                     src="/images/logo.png"
                     alt="Xuất khẩu lao động, lao động nước ngoài"
@@ -9,6 +9,9 @@
             </b-navbar-item>
         </template>
         <template slot="start">
+            <b-navbar-item href="/chuyen-muc/kien-thuc">
+                Kiến thức
+            </b-navbar-item>
             <b-navbar-item href="#">
                 Kinh nghiệm
             </b-navbar-item>

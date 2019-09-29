@@ -22,6 +22,7 @@ Vue.component('site-navbar', require('./components/SiteNavbar.vue'))
 Vue.component('site-footer', require('./components/SiteFooter.vue'))
 Vue.component('notification', require('./components/common/Notification.vue'))
 Vue.component('home-page', require('./components/home/HomePage.vue'))
+Vue.component('category-posts', require('./components/posts/CategoryPosts.vue'))
 
 const app = new Vue({
     el: '#app'

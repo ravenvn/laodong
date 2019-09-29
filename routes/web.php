@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::post('/store-simple-contact', 'HomeController@storeSimpleContact');
+Route::get('/chuyen-muc/{category_slug}', 'PostController@category');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
