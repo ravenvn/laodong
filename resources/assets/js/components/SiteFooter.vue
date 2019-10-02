@@ -2,16 +2,23 @@
     <footer class="footer">
         <notification ref="notification"></notification>
         <div class="content has-text-centered">
-            Nếu bạn cần chia sẻ, hãy điền Họ tên, năm sinh và SĐT rồi nhấn nút <strong>Gửi</strong>. Tôi sẽ gọi cho bạn ngay khi có thể.
+            Nếu bạn cần thêm lời khuyên, hãy điền Họ tên, Năm sinh, SĐT và nội dung cần chia sẻ rồi nhấn nút <strong>Gửi</strong>. Tôi sẽ gọi cho bạn ngay khi có thể.
         </div>
         <div class="content has-text-centered">
             <div class="columns">
-                <div class="column is-6 is-offset-3">
-                    <div class="columns simple-form">
+                <div class="column is-6 is-offset-3 simple-form">
+                    <div class="columns">
                         <div class="column"><b-input v-model="name" placeholder="Họ và tên"></b-input></div>
                         <div class="column"><b-input v-model="birth" placeholder="Năm sinh" type="number"></b-input></div>
                         <div class="column" type="number"><b-input v-model="phone" placeholder="Số điện thoại"></b-input></div>
-                        <div class="column"><b-button type="is-success" :disabled="isInvalidInput" @click="send"><i class="fa fa-paper-plane"></i> Gửi</b-button></div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <b-input v-model="notes" type="textarea" rows="5" placeholder="Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."></b-input>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column"><b-button type="is-success" :disabled="isInvalidInput" @click="send" class=" is-pulled-right"><i class="fa fa-paper-plane"></i> Gửi</b-button></div>
                     </div>
                 </div>
             </div>
@@ -29,6 +36,7 @@
                 name: '',
                 birth: '',
                 phone: '',
+                notes: '',
                 isInvalidInput: true,
                 notification: {
                     type: 'success',
@@ -37,7 +45,7 @@
             }
         },
         mounted() {
-            this.$watch(vm => [vm.name, vm.birth, vm.phone].join(), val => {
+            this.$watch(vm => [vm.name, vm.birth, vm.phone, vm.notes].join(), val => {
                 this.checkInvalidInput()
             })
         },
@@ -45,6 +53,7 @@
             checkInvalidInput() {
                 let birthYear = Number(this.birth.trim())
                 if (this.name.trim() == '' ||
+                    this.notes.trim() == '' ||
                     (isNaN(birthYear) || birthYear < 1900 || birthYear >= 2100 ) ||
                     (this.phone.trim().length < 10 || this.phone.trim().length > 11)) {
                     this.isInvalidInput = true
@@ -56,11 +65,12 @@
                 const response = await axios.post('/store-simple-contact', {
                     name: this.name.trim(),
                     birth: this.birth.trim(),
-                    phone: this.phone.trim()
+                    phone: this.phone.trim(),
+                    notes: this.notes.trim()
                 })
 
                 if (response.data.status == 'success') {
-                    this.name = this.birth = this.phone = ''
+                    this.name = this.birth = this.phone = this.notes = ''
                     this.notification.type = 'success'
                     this.notification.content = 'Cảm ơn bạn. Tôi đã nhận được thông tin và sẽ gọi cho bạn ngay khi có thể!'
                 } else {

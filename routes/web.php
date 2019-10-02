@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index');
 Route::post('/store-simple-contact', 'HomeController@storeSimpleContact');
 Route::get('/chuyen-muc/{category_slug}', 'PostController@category');
+Route::get('/bai-viet/{post_slug}', 'PostController@post');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

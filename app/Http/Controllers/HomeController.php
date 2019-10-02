@@ -23,6 +23,7 @@ class HomeController extends Controller
                 'name' => $request->name,
                 'birth' => Carbon::createFromDate($request->birth, 1, 1),
                 'phone' => $request->phone,
+                'notes' => $request->notes,
             ]);
         } catch (\Exception $ex) {
             return response()->json(['status' => 'error', 'message' => $ex->getMessage()]);

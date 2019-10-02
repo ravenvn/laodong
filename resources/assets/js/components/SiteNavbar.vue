@@ -9,11 +9,8 @@
             </b-navbar-item>
         </template>
         <template slot="start">
-            <b-navbar-item href="/chuyen-muc/kien-thuc">
-                Kiến thức
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Kinh nghiệm
+            <b-navbar-item href="/chuyen-muc/lao-dong-can-biet">
+                Lao động cần biết
             </b-navbar-item>
             <b-navbar-item href="#">
                 Đơn hàng
