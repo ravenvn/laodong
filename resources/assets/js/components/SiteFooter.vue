@@ -14,7 +14,7 @@
                     </div>
                     <div class="columns">
                         <div class="column">
-                            <b-input v-model="notes" type="textarea" rows="5" placeholder="Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."></b-input>
+                            <b-input v-model="notes" type="textarea" rows="5" placeholder="Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, ngoại ngữ, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."></b-input>
                         </div>
                     </div>
                     <div class="columns">

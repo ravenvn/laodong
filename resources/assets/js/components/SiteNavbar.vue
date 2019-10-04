@@ -10,24 +10,18 @@
         </template>
         <template slot="start">
             <b-navbar-item href="/chuyen-muc/lao-dong-can-biet">
-                Lao động cần biết
+                <i class="fas fa-book"></i>&nbsp;Lao động cần biết
             </b-navbar-item>
-            <b-navbar-item href="#">
-                Đơn hàng
-            </b-navbar-item>
-            <b-navbar-dropdown label="Quốc gia XKLĐ">
-                <b-navbar-item href="#">
-                    Nhật Bản
+            <b-navbar-dropdown label="💥Đơn hàng mới">
+                <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-nhat-ban-moi-nhat">
+                    🇯🇵Nhật Bản
                 </b-navbar-item>
-                <b-navbar-item href="#">
-                    Đài Loan
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Singapore
+                <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-dai-loan-moi-nhat">
+                    🇹🇼Đài Loan
                 </b-navbar-item>
                 <hr class="navbar-divider">
-                <b-navbar-item href="#">
-                    Hungary
+                <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-chau-au-moi-nhat">
+                    🇪🇺Châu Âu
                 </b-navbar-item>
             </b-navbar-dropdown>
         </template>

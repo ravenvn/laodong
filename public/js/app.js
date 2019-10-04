@@ -57473,34 +57473,50 @@ var render = function() {
           _c(
             "b-navbar-item",
             { attrs: { href: "/chuyen-muc/lao-dong-can-biet" } },
-            [_vm._v("\n            Lao động cần biết\n        ")]
+            [
+              _c("i", { staticClass: "fas fa-book" }),
+              _vm._v(" Lao động cần biết\n        ")
+            ]
           ),
-          _vm._v(" "),
-          _c("b-navbar-item", { attrs: { href: "#" } }, [
-            _vm._v("\n            Đơn hàng\n        ")
-          ]),
           _vm._v(" "),
           _c(
             "b-navbar-dropdown",
-            { attrs: { label: "Quốc gia XKLĐ" } },
+            { attrs: { label: "💥Đơn hàng mới" } },
             [
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                Nhật Bản\n            ")
-              ]),
+              _c(
+                "b-navbar-item",
+                {
+                  attrs: {
+                    href:
+                      "/chuyen-muc/don-hang-xuat-khau-lao-dong-nhat-ban-moi-nhat"
+                  }
+                },
+                [_vm._v("\n                🇯🇵Nhật Bản\n            ")]
+              ),
               _vm._v(" "),
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                Đài Loan\n            ")
-              ]),
-              _vm._v(" "),
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                Singapore\n            ")
-              ]),
+              _c(
+                "b-navbar-item",
+                {
+                  attrs: {
+                    href:
+                      "/chuyen-muc/don-hang-xuat-khau-lao-dong-dai-loan-moi-nhat"
+                  }
+                },
+                [_vm._v("\n                🇹🇼Đài Loan\n            ")]
+              ),
               _vm._v(" "),
               _c("hr", { staticClass: "navbar-divider" }),
               _vm._v(" "),
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                Hungary\n            ")
-              ])
+              _c(
+                "b-navbar-item",
+                {
+                  attrs: {
+                    href:
+                      "/chuyen-muc/don-hang-xuat-khau-lao-dong-chau-au-moi-nhat"
+                  }
+                },
+                [_vm._v("\n                🇪🇺Châu Âu\n            ")]
+              )
             ],
             1
           )
@@ -58649,7 +58665,7 @@ var render = function() {
                       type: "textarea",
                       rows: "5",
                       placeholder:
-                        "Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."
+                        "Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, ngoại ngữ, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."
                     },
                     model: {
                       value: _vm.notes,
@@ -59262,6 +59278,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -59280,8 +59298,10 @@ var render = function() {
   return _c("section", { staticClass: "post-summary" }, [
     _c("div", { staticClass: "columns" }, [
       _c("div", { staticClass: "column is-2" }, [
-        _c("figure", { staticClass: "image" }, [
-          _c("img", { attrs: { src: "/" + _vm.post.image } })
+        _c("a", { attrs: { href: "/bai-viet/" + _vm.post.slug } }, [
+          _c("figure", { staticClass: "image" }, [
+            _c("img", { attrs: { src: "/" + _vm.post.image } })
+          ])
         ])
       ]),
       _vm._v(" "),
