@@ -57522,21 +57522,6 @@ var render = function() {
           )
         ],
         1
-      ),
-      _vm._v(" "),
-      _c(
-        "template",
-        { slot: "end" },
-        [
-          _c("b-navbar-item", { attrs: { tag: "div" } }, [
-            _c("div", { staticClass: "buttons" }, [
-              _c("a", { staticClass: "button is-primary" }, [
-                _c("strong", [_vm._v("Trở thành CTV")])
-              ])
-            ])
-          ])
-        ],
-        1
       )
     ],
     2
