@@ -59285,7 +59285,7 @@ var render = function() {
       _c("div", { staticClass: "column is-2" }, [
         _c("a", { attrs: { href: "/bai-viet/" + _vm.post.slug } }, [
           _c("figure", { staticClass: "image" }, [
-            _c("img", { attrs: { src: "/" + _vm.post.image } })
+            _c("img", { attrs: { src: "/storage/" + _vm.post.image } })
           ])
         ])
       ]),

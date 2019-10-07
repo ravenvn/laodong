@@ -4,7 +4,7 @@
             <div class="column is-2">
                 <a :href="'/bai-viet/' + post.slug">
                     <figure class="image">
-                        <img :src="'/' + post.image">
+                        <img :src="'/storage/' + post.image">
                     </figure>
                 </a>
             </div>
