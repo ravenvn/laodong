@@ -57704,6 +57704,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -57711,12 +57721,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             name: '',
             birth: '',
             phone: '',
+            provinceId: null,
             notes: '',
             isInvalidInput: true,
             notification: {
                 type: 'success',
                 content: ''
-            }
+            },
+            provinces: [{ id: '40', name: 'Nghệ An' }, { id: '42', name: 'Hà Tĩnh' }, { id: '11', name: 'Điện Biên' }, { id: '25', name: 'Phú Thọ' }, { id: '30', name: 'Hải Dương' }, { id: '38', name: 'Thanh Hóa' }, { id: '1000', name: 'Tỉnh thành khác' }]
         };
     },
     mounted: function mounted() {
@@ -57750,6 +57762,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                                     name: this.name.trim(),
                                     birth: this.birth.trim(),
                                     phone: this.phone.trim(),
+                                    provinceId: this.provinceId || '1000',
                                     notes: this.notes.trim()
                                 });
 
@@ -58583,7 +58596,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "content has-text-centered" }, [
         _c("div", { staticClass: "columns" }, [
-          _c("div", { staticClass: "column is-6 is-offset-3 simple-form" }, [
+          _c("div", { staticClass: "column is-8 is-offset-2 simple-form" }, [
             _c("div", { staticClass: "columns" }, [
               _c(
                 "div",
@@ -58635,6 +58648,41 @@ var render = function() {
                       expression: "phone"
                     }
                   })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "column" },
+                [
+                  _c(
+                    "b-select",
+                    {
+                      attrs: { placeholder: "Quê quán" },
+                      model: {
+                        value: _vm.provinceId,
+                        callback: function($$v) {
+                          _vm.provinceId = $$v
+                        },
+                        expression: "provinceId"
+                      }
+                    },
+                    _vm._l(_vm.provinces, function(province) {
+                      return _c(
+                        "option",
+                        { key: province.id, domProps: { value: province.id } },
+                        [
+                          _vm._v(
+                            "\n                                " +
+                              _vm._s(province.name) +
+                              "\n                            "
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
                 ],
                 1
               )

@@ -6,11 +6,21 @@
         </div>
         <div class="content has-text-centered">
             <div class="columns">
-                <div class="column is-6 is-offset-3 simple-form">
+                <div class="column is-8 is-offset-2 simple-form">
                     <div class="columns">
                         <div class="column"><b-input v-model="name" placeholder="Họ và tên"></b-input></div>
                         <div class="column"><b-input v-model="birth" placeholder="Năm sinh" type="number"></b-input></div>
                         <div class="column" type="number"><b-input v-model="phone" placeholder="Số điện thoại"></b-input></div>
+                        <div class="column">
+                            <b-select placeholder="Quê quán" v-model="provinceId">
+                                <option
+                                    v-for="province in provinces"
+                                    :value="province.id"
+                                    :key="province.id">
+                                    {{ province.name }}
+                                </option>
+                            </b-select>
+                        </div>
                     </div>
                     <div class="columns">
                         <div class="column">
@@ -36,12 +46,22 @@
                 name: '',
                 birth: '',
                 phone: '',
+                provinceId: null,
                 notes: '',
                 isInvalidInput: true,
                 notification: {
                     type: 'success',
                     content: ''
-                }
+                },
+                provinces: [
+                    { id: '40', name: 'Nghệ An'},
+                    { id: '42', name: 'Hà Tĩnh'},
+                    { id: '11', name: 'Điện Biên'},
+                    { id: '25', name: 'Phú Thọ'},
+                    { id: '30', name: 'Hải Dương'},
+                    { id: '38', name: 'Thanh Hóa'},
+                    { id: '1000', name: 'Tỉnh thành khác'},
+                ]
             }
         },
         mounted() {
@@ -66,6 +86,7 @@
                     name: this.name.trim(),
                     birth: this.birth.trim(),
                     phone: this.phone.trim(),
+                    provinceId: this.provinceId || '1000',
                     notes: this.notes.trim()
                 })
 
