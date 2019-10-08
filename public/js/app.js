@@ -57714,6 +57714,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -58764,6 +58765,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content has-text-centered" }, [
+      _vm._v("\n        Hotline: Mr Vinh "),
+      _c("a", { attrs: { href: "tel:0965999290" } }, [_vm._v("0965.999.290")]),
+      _vm._v(" - Tầng 5 N02-T2 Ngoại Giao Đoàn, Hà Nội"),
+      _c("br"),
       _vm._v(
         "\n        Để an toàn, hãy kiểm tra kỹ xem công ty XKLĐ bạn chuẩn bị tham gia có trong danh sách chính thức của Cục quản lý lao động ngoài nước hay không tại đây "
       ),
