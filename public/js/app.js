@@ -57722,7 +57722,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             birth: '',
             phone: '',
             provinceId: null,
-            notes: '',
+            details: '',
             isInvalidInput: true,
             notification: {
                 type: 'success',
@@ -57735,7 +57735,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
         var _this = this;
 
         this.$watch(function (vm) {
-            return [vm.name, vm.birth, vm.phone, vm.notes].join();
+            return [vm.name, vm.birth, vm.phone, vm.details].join();
         }, function (val) {
             _this.checkInvalidInput();
         });
@@ -57744,7 +57744,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     methods: {
         checkInvalidInput: function checkInvalidInput() {
             var birthYear = Number(this.birth.trim());
-            if (this.name.trim() == '' || this.notes.trim() == '' || isNaN(birthYear) || birthYear < 1900 || birthYear >= 2100 || this.phone.trim().length < 10 || this.phone.trim().length > 11) {
+            if (this.name.trim() == '' || this.details.trim() == '' || isNaN(birthYear) || birthYear < 1900 || birthYear >= 2100 || this.phone.trim().length < 10 || this.phone.trim().length > 11) {
                 this.isInvalidInput = true;
             } else {
                 this.isInvalidInput = false;
@@ -57763,7 +57763,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                                     birth: this.birth.trim(),
                                     phone: this.phone.trim(),
                                     provinceId: this.provinceId || '1000',
-                                    notes: this.notes.trim()
+                                    details: this.details.trim()
                                 });
 
                             case 2:
@@ -57771,7 +57771,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
                                 if (response.data.status == 'success') {
-                                    this.name = this.birth = this.phone = this.notes = '';
+                                    this.name = this.birth = this.phone = this.details = '';
                                     this.notification.type = 'success';
                                     this.notification.content = 'Cảm ơn bạn. Tôi đã nhận được thông tin và sẽ gọi cho bạn ngay khi có thể!';
                                 } else {
@@ -58701,11 +58701,11 @@ var render = function() {
                         "Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, ngoại ngữ, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."
                     },
                     model: {
-                      value: _vm.notes,
+                      value: _vm.details,
                       callback: function($$v) {
-                        _vm.notes = $$v
+                        _vm.details = $$v
                       },
-                      expression: "notes"
+                      expression: "details"
                     }
                   })
                 ],

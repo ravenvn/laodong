@@ -24,7 +24,7 @@
                     </div>
                     <div class="columns">
                         <div class="column">
-                            <b-input v-model="notes" type="textarea" rows="5" placeholder="Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, ngoại ngữ, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."></b-input>
+                            <b-input v-model="details" type="textarea" rows="5" placeholder="Điền nội dung bạn cần chia sẻ ở đây. Nhớ ghi rõ chi tiết về bạn như chiều cao, cân nặng, tình trạng sức khỏe, trình độ học vấn, ngoại ngữ, tay nghề cũng như mong muốn của bạn để tôi hiểu rõ bạn hơn từ đó tôi có thể giúp bạn được nhiều hơn."></b-input>
                         </div>
                     </div>
                     <div class="columns">
@@ -47,7 +47,7 @@
                 birth: '',
                 phone: '',
                 provinceId: null,
-                notes: '',
+                details: '',
                 isInvalidInput: true,
                 notification: {
                     type: 'success',
@@ -65,7 +65,7 @@
             }
         },
         mounted() {
-            this.$watch(vm => [vm.name, vm.birth, vm.phone, vm.notes].join(), val => {
+            this.$watch(vm => [vm.name, vm.birth, vm.phone, vm.details].join(), val => {
                 this.checkInvalidInput()
             })
         },
@@ -73,7 +73,7 @@
             checkInvalidInput() {
                 let birthYear = Number(this.birth.trim())
                 if (this.name.trim() == '' ||
-                    this.notes.trim() == '' ||
+                    this.details.trim() == '' ||
                     (isNaN(birthYear) || birthYear < 1900 || birthYear >= 2100 ) ||
                     (this.phone.trim().length < 10 || this.phone.trim().length > 11)) {
                     this.isInvalidInput = true
@@ -87,11 +87,11 @@
                     birth: this.birth.trim(),
                     phone: this.phone.trim(),
                     provinceId: this.provinceId || '1000',
-                    notes: this.notes.trim()
+                    details: this.details.trim()
                 })
 
                 if (response.data.status == 'success') {
-                    this.name = this.birth = this.phone = this.notes = ''
+                    this.name = this.birth = this.phone = this.details = ''
                     this.notification.type = 'success'
                     this.notification.content = 'Cảm ơn bạn. Tôi đã nhận được thông tin và sẽ gọi cho bạn ngay khi có thể!'
                 } else {
