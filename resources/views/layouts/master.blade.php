@@ -33,6 +33,6 @@
         @yield('content')
         <site-footer></site-footer>
     </div>
-    <script src="/js/app.js?v=1.1"></script>
+    <script src="/js/app.js?v=1.2"></script>
 </body>
 </html>
