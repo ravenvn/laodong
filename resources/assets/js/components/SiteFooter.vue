@@ -36,6 +36,61 @@
         <div class="content has-text-centered">
             Để an toàn, hãy kiểm tra kỹ xem công ty XKLĐ bạn chuẩn bị tham gia có trong danh sách chính thức của Cục quản lý lao động ngoài nước hay không tại đây <i class="fas fa-hand-point-down"></i><a href="http://www.dolab.gov.vn/BU/Index.aspx?LIST_ID=1371&type=hdmbmtmn&MENU_ID=246&DOC_ID=1561" target="_blank"><img src="/images/bo_lao_dong.png"/></a>
         </div>
+        <div class="content has-text-centered">
+            <div class="mobile-only">
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-emico.png" alt="xkld Emico EK">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-hoang-long.png" alt="xkld Hoàng Long CMS">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-itc-quoc-te.jpeg" alt="xkld ITC Quốc Tế">
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-mai-linh.jpg" alt="xkld Mai Linh MSP">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-mh.png" alt="xkld MH">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-miyata.png" alt="xkld Miyata">
+                        </figure>
+                    </div>
+                </div>
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-sao-viet.jpg" alt="xkld Sao Việt">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-thuan-an-kyoto.png" alt="xkld Thuận An Kyoto">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-64x64 is-inline-block">
+                            <img src="/images/xkld-viet-tin.jpeg" alt="xkld Việt Tín">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 

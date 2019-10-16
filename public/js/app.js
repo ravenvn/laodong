@@ -57714,6 +57714,61 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -58741,7 +58796,9 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2)
     ],
     1
   )
@@ -58779,6 +58836,110 @@ var staticRenderFns = [
         },
         [_c("img", { attrs: { src: "/images/bo_lao_dong.png" } })]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content has-text-centered" }, [
+      _c("div", { staticClass: "mobile-only" }, [
+        _c("div", { staticClass: "columns is-mobile" }, [
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: { src: "/images/xkld-emico.png", alt: "xkld Emico EK" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-hoang-long.png",
+                  alt: "xkld Hoàng Long CMS"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-itc-quoc-te.jpeg",
+                  alt: "xkld ITC Quốc Tế"
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "columns is-mobile" }, [
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-mai-linh.jpg",
+                  alt: "xkld Mai Linh MSP"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: { src: "/images/xkld-mh.png", alt: "xkld MH" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: { src: "/images/xkld-miyata.png", alt: "xkld Miyata" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "columns is-mobile" }, [
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-sao-viet.jpg",
+                  alt: "xkld Sao Việt"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-thuan-an-kyoto.png",
+                  alt: "xkld Thuận An Kyoto"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "column" }, [
+            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
+              _c("img", {
+                attrs: {
+                  src: "/images/xkld-viet-tin.jpeg",
+                  alt: "xkld Việt Tín"
+                }
+              })
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
