@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Province;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Page;
@@ -31,5 +32,10 @@ class HomeController extends Controller
         }
 
         return response()->json(['status' => 'success']);
+    }
+
+    public function getAllProvinces()
+    {
+        return response()->json(['provinces' => Province::orderBy('name')->get()]);
     }
 }

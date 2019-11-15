@@ -1,8 +1,14 @@
 <template>
     <footer class="footer">
         <notification ref="notification"></notification>
-        <div class="content has-text-centered">
-            Nếu bạn cần thêm lời khuyên, hãy điền Họ tên, Năm sinh, SĐT và nội dung cần chia sẻ rồi nhấn nút <strong>Gửi</strong>. Tôi sẽ gọi cho bạn ngay khi có thể.
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                <div class="content has-text-centered">
+                    
+                    Nếu bạn muốn đi xuất khẩu lao động an toàn và bay nhanh, hãy gọi cho tôi Mr. Thái Xiêm <b><a href="tel:0965633335">0965.633.335</a></b> - <b><a href="tel:0987759848">0987.759.848</a></b>.<br/>Tôi hiện là phó giám đốc trung tâm đào tạo số 1 công ty cổ phần đầu tư hợp tác quốc tế <b>Nam Việt</b>.<br/>Hiện tôi đang có nhiều chương trình hỗ trợ cho lao động các chi phí ăn, học, ở, khám sức khỏe và bao đỗ cho những bạn gọi ngay hôm nay <b>({{ getCurrentDate() }})</b><br/>
+                    ĐC: Số 25, Liền kề 5A, Tiểu khu đô thị mới Vạn Phúc, Hà Đông, Hà Nội.
+                </div>
+            </div>
         </div>
         <div class="content has-text-centered">
             <div class="columns">
@@ -33,9 +39,9 @@
                 </div>
             </div>
         </div>
-        <div class="content has-text-centered">
+        <!-- <div class="content has-text-centered">
             Để an toàn, hãy kiểm tra kỹ xem công ty XKLĐ bạn chuẩn bị tham gia có trong danh sách chính thức của Cục quản lý lao động ngoài nước hay không tại đây <i class="fas fa-hand-point-down"></i><a href="http://www.dolab.gov.vn/BU/Index.aspx?LIST_ID=1371&type=hdmbmtmn&MENU_ID=246&DOC_ID=1561" target="_blank"><img src="/images/bo_lao_dong.png"/></a>
-        </div>
+        </div> -->
         <div class="content has-text-centered">
             <div class="mobile-only">
                 <div class="columns is-mobile">
@@ -108,23 +114,20 @@
                     type: 'success',
                     content: ''
                 },
-                provinces: [
-                    { id: '40', name: 'Nghệ An'},
-                    { id: '42', name: 'Hà Tĩnh'},
-                    { id: '11', name: 'Điện Biên'},
-                    { id: '25', name: 'Phú Thọ'},
-                    { id: '30', name: 'Hải Dương'},
-                    { id: '38', name: 'Thanh Hóa'},
-                    { id: '1000', name: 'Tỉnh thành khác'},
-                ]
+                provinces: []
             }
         },
         mounted() {
+            this.loadProvinces()
             this.$watch(vm => [vm.name, vm.birth, vm.phone, vm.details].join(), val => {
                 this.checkInvalidInput()
             })
         },
         methods: {
+            async loadProvinces() {
+                const response = await axios.get('/ajax/get-all-provinces');
+                this.provinces = response.data.provinces
+            },
             checkInvalidInput() {
                 let birthYear = Number(this.birth.trim())
                 if (this.name.trim() == '' ||
@@ -154,6 +157,14 @@
                     this.notification.content = 'Vui lòng làm mới trình duyệt và thử lại.'
                 }
                 this.$refs.notification.show(this.notification)
+            },
+            getCurrentDate() {
+                var today = new Date()
+                var dd = String(today.getDate()).padStart(2, '0')
+                var mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
+                var yyyy = today.getFullYear()
+
+                return dd + '/' + mm + '/' + yyyy
             }
         }
     }
