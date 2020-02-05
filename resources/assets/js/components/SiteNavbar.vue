@@ -14,14 +14,14 @@
             </b-navbar-item>
             <b-navbar-dropdown label="💥Đơn hàng mới">
                 <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-nhat-ban-moi-nhat">
-                    🇯🇵Nhật Bản
+                    Nhật Bản
                 </b-navbar-item>
                 <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-dai-loan-moi-nhat">
-                    🇹🇼Đài Loan
+                    Đài Loan
                 </b-navbar-item>
                 <hr class="navbar-divider">
                 <b-navbar-item href="/chuyen-muc/don-hang-xuat-khau-lao-dong-chau-au-moi-nhat">
-                    🇪🇺Châu Âu
+                    Châu Âu
                 </b-navbar-item>
             </b-navbar-dropdown>
         </template>
