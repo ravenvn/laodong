@@ -11,4 +11,9 @@ class Contact extends Model
 
     protected $dates = ['deleted_at'];
     protected $guarded = ['id', 'deleted_at'];
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class);
+    }
 }

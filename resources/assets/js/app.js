@@ -24,6 +24,7 @@ Vue.component('notification', require('./components/common/Notification.vue'))
 Vue.component('home-page', require('./components/home/HomePage.vue'))
 Vue.component('category-posts', require('./components/posts/CategoryPosts.vue'))
 Vue.component('post-detail', require('./components/posts/PostDetail.vue'))
+Vue.component('contacts', require('./components/home/Contacts.vue'))
 
 const app = new Vue({
     el: '#app'

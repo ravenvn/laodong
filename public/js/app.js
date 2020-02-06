@@ -13013,6 +13013,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('notification', __webpack_
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('home-page', __webpack_require__(121));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('category-posts', __webpack_require__(126));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-detail', __webpack_require__(134));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('contacts', __webpack_require__(150));
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app'
@@ -59727,6 +59728,359 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(9)
+/* script */
+var __vue_script__ = __webpack_require__(153)
+/* template */
+var __vue_template__ = __webpack_require__(154)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/home/Contacts.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3a5cacc8", Component.options)
+  } else {
+    hotAPI.reload("data-v-3a5cacc8", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 151 */,
+/* 152 */,
+/* 153 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            contacts: [],
+            total: 0,
+            loading: false,
+            sortField: 'created_at',
+            sortOrder: 'desc',
+            defaultSortOrder: 'desc',
+            page: 1,
+            perPage: 20
+        };
+    },
+
+    methods: {
+        loadAsyncData: function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+                var response;
+                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                this.loading = true;
+                                _context.next = 3;
+                                return axios.get('/ajax/get-contacts', {
+                                    params: {
+                                        sortField: this.sortField,
+                                        sortOrder: this.sortOrder,
+                                        page: this.page,
+                                        perPage: this.perPage
+                                    }
+                                });
+
+                            case 3:
+                                response = _context.sent;
+
+                                this.contacts = response.data.contacts;
+                                this.total = response.data.total;
+                                this.loading = false;
+
+                            case 7:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function loadAsyncData() {
+                return _ref.apply(this, arguments);
+            }
+
+            return loadAsyncData;
+        }(),
+
+        /*
+        * Handle page-change event
+        */
+        onPageChange: function onPageChange(page) {
+            this.page = page;
+            this.loadAsyncData();
+        },
+
+        /*
+        * Handle sort event
+        */
+        onSort: function onSort(field, order) {
+            this.sortField = field;
+            this.sortOrder = order;
+            this.loadAsyncData();
+        }
+    },
+    mounted: function mounted() {
+        this.loadAsyncData();
+    }
+});
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("b-table", {
+        attrs: {
+          data: _vm.contacts,
+          loading: _vm.loading,
+          bordered: "",
+          paginated: "",
+          "backend-pagination": "",
+          total: _vm.total,
+          "per-page": _vm.perPage,
+          "aria-next-label": "Next",
+          "aria-previous-label": "Previous",
+          "aria-page-label": "Page",
+          "aria-current-label": "Current",
+          "backend-sorting": "",
+          "default-sort-direction": _vm.defaultSortOrder,
+          "default-sort": [_vm.sortField, _vm.sortOrder]
+        },
+        on: { "page-change": _vm.onPageChange, sort: _vm.onSort },
+        scopedSlots: _vm._u([
+          {
+            key: "default",
+            fn: function(props) {
+              return [
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "serial", label: "#" } },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.serial) +
+                        "\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "name", label: "Tên" } },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.name) +
+                        "\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  {
+                    attrs: { field: "birth", label: "Năm sinh", sortable: "" }
+                  },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.birth.substring(0, 4)) +
+                        "\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "phone", label: "SĐT" } },
+                  [
+                    _c("a", { attrs: { href: "tel:" + props.row.phone } }, [
+                      _vm._v(_vm._s(props.row.phone))
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "province", label: "Tỉnh", sortable: "" } },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.province.name) +
+                        "\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "details", label: "Chi tiết" } },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.details) +
+                        "\n            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  {
+                    attrs: {
+                      field: "created_at",
+                      label: "Ngày đăng ký",
+                      sortable: ""
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(props.row.created_at) +
+                        "\n            "
+                    )
+                  ]
+                )
+              ]
+            }
+          }
+        ])
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "has-text-centered" }, [
+      _c("strong", [_vm._v("Danh sách lao động")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3a5cacc8", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

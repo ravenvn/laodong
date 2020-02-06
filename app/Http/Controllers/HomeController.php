@@ -38,4 +38,24 @@ class HomeController extends Controller
     {
         return response()->json(['provinces' => Province::orderBy('name')->get()]);
     }
+    
+    public function getContacts(Request $request)
+    {
+        $contacts = Contact::with('province')
+                    ->orderBy($request->sortField, $request->sortOrder)
+                    ->skip(($request->page - 1) * $request->perPage)
+                    ->take($request->perPage)
+                    ->get();
+        $startIndex = ($request->page - 1) * $request->perPage + 1;
+        foreach ($contacts as $contact) {
+            $contact->serial = $startIndex++;
+        }
+
+        return response()->json(['contacts' => $contacts, 'total' => Contact::count()]);
+    }
+
+    public function contacts()
+    {
+        return view('home.contacts');
+    }
 }
