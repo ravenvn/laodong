@@ -58,4 +58,14 @@ class HomeController extends Controller
     {
         return view('home.contacts');
     }
+
+    public function updateNotes(Request $request)
+    {
+        $contact = Contact::find($request->contactId);
+        $contact->update([
+            'notes' => $request->notes,
+        ]);
+
+        return response()->json(['status' => 'success']);
+    }
 }

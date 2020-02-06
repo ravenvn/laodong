@@ -59851,6 +59851,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -59862,13 +59866,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             sortOrder: 'desc',
             defaultSortOrder: 'desc',
             page: 1,
-            perPage: 20
+            perPage: 20,
+            notes: {}
         };
     },
 
     methods: {
         loadAsyncData: function () {
             var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+                var _this = this;
+
                 var response;
                 return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
                     while (1) {
@@ -59889,10 +59896,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                                 response = _context.sent;
 
                                 this.contacts = response.data.contacts;
+                                this.contacts.forEach(function (contact) {
+                                    _this.notes[contact.id] = contact.notes;
+                                });
                                 this.total = response.data.total;
                                 this.loading = false;
 
-                            case 7:
+                            case 8:
                             case 'end':
                                 return _context.stop();
                         }
@@ -59922,7 +59932,39 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             this.sortField = field;
             this.sortOrder = order;
             this.loadAsyncData();
-        }
+        },
+        updateNotes: function () {
+            var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(contactId) {
+                var response;
+                return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+                    while (1) {
+                        switch (_context2.prev = _context2.next) {
+                            case 0:
+                                _context2.next = 2;
+                                return axios.post('/ajax/update-notes', {
+                                    contactId: contactId,
+                                    notes: this.notes[contactId]
+                                });
+
+                            case 2:
+                                response = _context2.sent;
+
+                                alert('OK');
+
+                            case 4:
+                            case 'end':
+                                return _context2.stop();
+                        }
+                    }
+                }, _callee2, this);
+            }));
+
+            function updateNotes(_x) {
+                return _ref2.apply(this, arguments);
+            }
+
+            return updateNotes;
+        }()
     },
     mounted: function mounted() {
         this.loadAsyncData();
@@ -60015,7 +60057,9 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "b-table-column",
-                  { attrs: { field: "province", label: "Tỉnh", sortable: "" } },
+                  {
+                    attrs: { field: "province_id", label: "Tỉnh", sortable: "" }
+                  },
                   [
                     _vm._v(
                       "\n                " +
@@ -60053,6 +60097,37 @@ var render = function() {
                         "\n            "
                     )
                   ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-table-column",
+                  { attrs: { field: "notes", width: "200", label: "Ghi chú" } },
+                  [
+                    _c("b-input", {
+                      attrs: { type: "textarea" },
+                      model: {
+                        value: _vm.notes[props.row.id],
+                        callback: function($$v) {
+                          _vm.$set(_vm.notes, props.row.id, $$v)
+                        },
+                        expression: "notes[props.row.id]"
+                      }
+                    }),
+                    _vm._v(" \n                "),
+                    _c(
+                      "b-button",
+                      {
+                        attrs: { type: "is-success" },
+                        on: {
+                          click: function($event) {
+                            return _vm.updateNotes(props.row.id)
+                          }
+                        }
+                      },
+                      [_vm._v("Cập nhật")]
+                    )
+                  ],
+                  1
                 )
               ]
             }

@@ -21,3 +21,4 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 Route::get('/ajax/get-contacts', 'HomeController@getContacts');
+Route::post('/ajax/update-notes', 'HomeController@updateNotes');
