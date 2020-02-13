@@ -4,8 +4,9 @@
         <div class="columns">
             <div class="column is-10 is-offset-1">
                 <div class="content has-text-centered">
-                    Nếu bạn muốn đi xuất khẩu lao động an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Mr. Thành Vinh <b><a href="tel:0965999290">0965.999.290</a></b> - <b><a href="tel:0965656311">0965.65.63.11</a></b>.<br/>Tôi hiện là trưởng ban tuyển dụng trực tuyến EK Group, hệ thống bao gồm 3 công ty thành viên là EK, Emico và Labco.<br/>Hiện tôi đang có nhiều chương trình hỗ trợ cho lao động các chi phí ăn, học, ở, khám sức khỏe và bao đỗ cho những bạn gọi ngay hôm nay <b>({{ getCurrentDate() }})</b><br/>
-                    ĐC: Tầng 6, CT1, Tòa Bắc Hà C14, Tố Hữu, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội
+                    Nếu bạn muốn đi xuất khẩu lao động an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Mr. Thành Vinh <b><a href="tel:0965999290">0965.999.290</a></b> - <b><a href="tel:0965656311">0965.65.63.11</a></b>.<br/>Tôi hiện là trưởng ban tuyển dụng trực tuyến Mai Linh &amp; EK Group, hệ thống bao gồm 4 công ty thành viên là Mai Linh, EK, Emico và Labco.<br/>Hiện tôi đang có nhiều chương trình hỗ trợ cho lao động các chi phí ăn, học, ở, khám sức khỏe và bao đỗ cho những bạn gọi ngay hôm nay <b>({{ getCurrentDate() }})</b><br/>
+                    ĐC: CS1: Tầng 6, CT1, Tòa Bắc Hà C14, Tố Hữu, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội
+                    CS2: Tầng 5, N01 T2, Ngoại Giao Đoàn, Q.Bắc Từ Liêm, Hà Nội.
                 </div>
             </div>
         </div>
