@@ -33,6 +33,6 @@
         @yield('content')
         <site-footer></site-footer>
     </div>
-    <script src="/js/app.js?v=1.2"></script>
+    <script src="{{ asset('/js/app.js') }}?v=1.3"></script>
 </body>
 </html>
