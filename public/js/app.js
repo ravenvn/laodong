@@ -59393,55 +59393,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -60355,15 +60306,13 @@ var render = function() {
         _c("div", { staticClass: "column is-10 is-offset-1" }, [
           _c("div", { staticClass: "content has-text-centered" }, [
             _vm._v(
-              "\n                Nếu bạn muốn đi xuất khẩu lao động an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Mr. Thành Vinh "
+              "\n                Nếu bạn muốn đi xuất khẩu lao động an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Ms. Bảo Châu "
             ),
             _vm._m(0),
-            _vm._v(" - "),
-            _vm._m(1),
             _vm._v("."),
             _c("br"),
             _vm._v(
-              "Tôi hiện là trưởng ban tuyển dụng trực tuyến Mai Linh & EK Group, hệ thống bao gồm 4 công ty thành viên là Mai Linh, EK, Emico và Labco."
+              "Tôi hiện là nhân viên tuyển dụng trực tuyến của công ty XKLĐ Hoàng Long CMS."
             ),
             _c("br"),
             _vm._v(
@@ -60372,7 +60321,7 @@ var render = function() {
             _c("b", [_vm._v("(" + _vm._s(_vm.getCurrentDate()) + ")")]),
             _c("br"),
             _vm._v(
-              "\n                ĐC: CS1: Tầng 6, CT1, Tòa Bắc Hà C14, Tố Hữu, P.Trung Văn, Q.Nam Từ Liêm, Hà Nội\n                CS2: Tầng 5, N01 T2, Ngoại Giao Đoàn, Q.Bắc Từ Liêm, Hà Nội.\n            "
+              "\n                ĐC: 72-74 Tân Xuân, Q.Bắc Từ Liêm, Hà Nội.\n            "
             )
           ])
         ])
@@ -60525,7 +60474,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(2)
+      _vm._m(1)
     ],
     1
   )
@@ -60536,15 +60485,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("b", [
-      _c("a", { attrs: { href: "tel:0965999290" } }, [_vm._v("0965.999.290")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("b", [
-      _c("a", { attrs: { href: "tel:0965656311" } }, [_vm._v("0965.65.63.11")])
+      _c("a", { attrs: { href: "tel:0949984343" } }, [_vm._v("094.998.4343")])
     ])
   },
   function() {
@@ -60552,101 +60493,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content has-text-centered" }, [
-      _c("div", { staticClass: "mobile-only" }, [
-        _c("div", { staticClass: "columns is-mobile" }, [
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: { src: "/images/xkld-emico.png", alt: "xkld Emico EK" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-hoang-long.png",
-                  alt: "xkld Hoàng Long CMS"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-itc-quoc-te.jpeg",
-                  alt: "xkld ITC Quốc Tế"
-                }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "columns is-mobile" }, [
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-mai-linh.jpg",
-                  alt: "xkld Mai Linh MSP"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: { src: "/images/xkld-mh.png", alt: "xkld MH" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: { src: "/images/xkld-miyata.png", alt: "xkld Miyata" }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "columns is-mobile" }, [
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-sao-viet.jpg",
-                  alt: "xkld Sao Việt"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-thuan-an-kyoto.png",
-                  alt: "xkld Thuận An Kyoto"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "column" }, [
-            _c("figure", { staticClass: "image is-64x64 is-inline-block" }, [
-              _c("img", {
-                attrs: {
-                  src: "/images/xkld-viet-tin.jpeg",
-                  alt: "xkld Việt Tín"
-                }
-              })
-            ])
-          ])
+      _c("div", { staticClass: "column" }, [
+        _c("figure", { staticClass: "image is-inline-block" }, [
+          _c("img", {
+            attrs: {
+              src: "/images/xkld-hoang-long.png",
+              alt: "xkld Hoàng Long CMS"
+            }
+          })
         ])
       ])
     ])
