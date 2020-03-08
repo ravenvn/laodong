@@ -7,7 +7,7 @@
     <meta http-equiv="content-language" content="vi" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="description" content="@yield('description', 'Toàn bộ thông tin bạn cần phải biết trước khi đi xuất khẩu lao động')"/>
-    <meta name="keywords" content="@yield('keywords', 'xuất khẩu lao động, lao động nước ngoài, XKLD, XKLĐ, xklđ nhật bản, xklđ đài loan')"/>
+    <meta name="keywords" content="@yield('keywords', 'xuất khẩu lao động, lao động nước ngoài, XKLD, XKLĐ, xklđ nhật bản, xklđ đài loan, xkld úc')"/>
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="all, index, follow" />
     <meta name="revisit-after" content="1 days" />
