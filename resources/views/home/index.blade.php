@@ -5,6 +5,5 @@
 @extends('layouts.master')
 
 @section('content')
-    <p>test4</p>
     <home-page :page="{{ $homepage }}"></home-page>
 @stop
