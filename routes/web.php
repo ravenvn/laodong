@@ -23,5 +23,5 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/ajax/get-contacts', 'HomeController@getContacts');
 Route::post('/ajax/update-notes', 'HomeController@updateNotes');
 Route::post('/pull', function () {
-    system('cd /var/www/html/laodong/ && git reset --hard HEAD && git pull');
+    system('cd /var/www/html/laodong/ && git reset --hard HEAD && git pull && php artisan migrate');
 });
