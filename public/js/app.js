@@ -60306,13 +60306,13 @@ var render = function() {
         _c("div", { staticClass: "column is-10 is-offset-1" }, [
           _c("div", { staticClass: "content has-text-centered" }, [
             _vm._v(
-              "\n                Nếu bạn muốn đi xuất khẩu lao động an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Ms. Bảo Châu "
+              "\n                Nếu bạn muốn đi xuất khẩu lao động Châu Âu, Nhật Bản an toàn, phí thấp và bay nhanh, hãy gọi cho tôi Mr Việt "
             ),
             _vm._m(0),
             _vm._v("."),
             _c("br"),
             _vm._v(
-              "Tôi hiện là nhân viên tuyển dụng trực tuyến của công ty XKLĐ Hoàng Long CMS."
+              "Tôi đã có kinh nghiệm 10 năm trong lĩnh vực Xuất khẩu lao động."
             ),
             _c("br"),
             _vm._v(
@@ -60321,7 +60321,7 @@ var render = function() {
             _c("b", [_vm._v("(" + _vm._s(_vm.getCurrentDate()) + ")")]),
             _c("br"),
             _vm._v(
-              "\n                ĐC: 72-74 Tân Xuân, Q.Bắc Từ Liêm, Hà Nội.\n            "
+              "\n                ĐC: P1302 Chung cư HV Hậu Cần, Long Biên, Hà Nội.\n            "
             )
           ])
         ])
@@ -60485,7 +60485,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("b", [
-      _c("a", { attrs: { href: "tel:0949984343" } }, [_vm._v("094.998.4343")])
+      _c("a", { attrs: { href: "tel:0868567589" } }, [_vm._v("0868.567.589")])
     ])
   },
   function() {
