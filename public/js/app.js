@@ -60488,23 +60488,6 @@ var staticRenderFns = [
       _c("a", { attrs: { href: "tel:0868567589" } }, [_vm._v("0868.567.589")])
     ])
   },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content has-text-centered" }, [
-      _c("div", { staticClass: "column" }, [
-        _c("figure", { staticClass: "image is-inline-block" }, [
-          _c("img", {
-            attrs: {
-              src: "/images/xkld-hoang-long.png",
-              alt: "xkld Hoàng Long CMS"
-            }
-          })
-        ])
-      ])
-    ])
-  }
 ]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
